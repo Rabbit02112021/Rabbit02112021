@@ -1,0 +1,60 @@
+#include<stdio.h>  
+#include<conio.h>  
+#include<graphics.h>  
+//#include<dos.h>  
+main()  
+{     
+    int gd=DETECT,gm;  
+    initgraph(&gd,&gm,"c:\\tc\\bgi");  
+    //printf("X= %d\n",getmaxx());
+    //printf("Y= %d" ,getmaxy());
+    rectangle(150,180,250,300); //H_FRONT
+    line(150,180,200,100); //TRI_LINE1
+    line(250,180,200,100); //TRI_LINE2
+    circle(200,140,10); //CIRCLE
+    setfillstyle(HATCH_FILL,14); //H_CIRCLE_FILL
+    floodfill(200,141,WHITE);
+    circle(520,60,40); //SUN
+    setfillstyle(SOLID_FILL,14); //SUN_FILL
+    floodfill(500,61,WHITE);
+    rectangle(250,180,450,300); //H_SIDE
+    line(200,100,400,100); //HOUSE_UP_LINE1
+    line(400,100,450,180); //HOUSE_UP_LINE2
+    rectangle(180,220,220,300); //GATE
+    rectangle(370,210,410,250); //WINDOW1
+    rectangle(290,210,330,250); //WINDOW2
+    line(180,220,200,240);   //GATE_P1
+    line(200,240,200,300);   //GATE_P2
+    setfillstyle(LTBKSLASH_FILL,BROWN); //H_GATE_FILL
+    floodfill(199,241,WHITE);
+    setfillstyle(LINE_FILL,51); //H_FRONT_FILL
+    floodfill(151,181,WHITE);
+    setfillstyle(LINE_FILL,52); //H_SIDE_FILL
+    floodfill(251,181,WHITE);
+    setfillstyle(BKSLASH_FILL,BROWN);  //H_SIDE_UPPER_FILL
+    floodfill(400,101,WHITE);
+    setfillstyle(HATCH_FILL,57); //H_TRIANGLE_FILL
+    floodfill(200,101,WHITE);
+    setfillstyle(XHATCH_FILL,WHITE); //WINDOW_FILL1
+    floodfill(371,211,WHITE);
+    setfillstyle(XHATCH_FILL,WHITE); //WINDOW_FILL2
+    floodfill(291,211,WHITE);
+    line(350,100,350,80);
+    line(380,100,380,80);
+    rectangle(345,75,385,80);
+    setfillstyle(HATCH_FILL,51);
+    floodfill(351,81,WHITE);
+    setfillstyle(SOLID_FILL,57);
+    floodfill(346,76,WHITE);
+    line(0,270,150,270);
+    line(450,270,640,270);
+    setfillstyle(SOLID_FILL,BLUE); //SKY_FILL
+    floodfill(1,1,WHITE);
+    setfillstyle(SOLID_FILL,GREEN); //GRASS_FILL
+    floodfill(1,271,WHITE);
+    line(180,300,80,480); //ROAD_LINE1
+    line(220,300,320,480); //ROAD_LINE2
+    setfillstyle(SOLID_FILL,56); //ROAD_FILL
+    floodfill(181,301,WHITE);
+    getch();  
+}
